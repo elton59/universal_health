@@ -3,7 +3,7 @@
 session_start();
 if(session_destroy()) {
 
-    header("Location:../");
+    header("Location:../.../../../index.php");
 
  }
 ?>

@@ -26,8 +26,8 @@ $name6 = mysqli_real_escape_string($conn,$_POST['date_of_appointment']);
 
 
 
-$sql=mysqli_query($conn,'INSERT INTO appointments(appointmenttype,status,doctors_email,patient_email,date_of_appointment)
-VALUES("'.$_POST['appointmenttype'].'","pending","'.$_POST['doctors_email'].'","'.$_POST['patient_email'].'","'.$_POST['date_of_appointment'].'")');
+$sql=mysqli_query($conn,'INSERT INTO appointments(appointmenttype,status,doctors_email,patient_email,date_of_appointment,userid)
+VALUES("'.$_POST['appointmenttype'].'","pending","'.$_POST['doctors_email'].'","'.$_POST['patient_email'].'","'.$_POST['date_of_appointment'].'","'.$_POST['customerid'].'")');
 		 if (!$sql) {
 		 die (mysqli_error($conn));
 }

@@ -52,7 +52,7 @@ $pdf->SetSubject('TCPDF ');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'Hopecore', 'P.O.BOX  1123 ln(), Meru', array(0,64,255), array(0,64,128));
+$pdf->SetHeaderData('', PDF_HEADER_LOGO_WIDTH, 'universal_health', 'P.O.BOX  1123 ln(), Meru', array(0,64,255), array(0,64,128));
 $pdf->setFooterData(array(0,64,0), array(0,64,128));
 
 // set header and footer fonts

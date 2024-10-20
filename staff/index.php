@@ -49,15 +49,11 @@
                                            <hr>
                                             <div  class="form-group">
                                            <a href="./health"><p>Medical Team</option></a>
-                                           <hr>
-                                            <a href="./lab"><p>Laboratory Operations</p></a><hr>
-                                            <a href="./pham"><p>Pharmacist</p></a><hr>
-
-                                            <a href="./transport"><p>Supplies And Inventory</p></a><hr>
+                                           <hr>                                         
                                             <a href="./patients"><p>Patient Portal</p></a><hr>
                                             <a href="./receptionist"><p>Receptionist Portal</p></a><hr>
-                                            <a href="./finance"><p>Finance Manager Portal</p></a><hr>
-                                            <a href="./hr"><p>Human Resource Manager Portal</p></a><hr>
+                                          <hr>
+                                            
 </div>
                                         </div>
                                      

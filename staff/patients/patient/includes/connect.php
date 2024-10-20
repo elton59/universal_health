@@ -3,7 +3,7 @@
 $db_host		= 'localhost';
 $db_user		= 'root';
 $db_pass		= '';
-$db_database	= 'hopecore'; 
+$db_database	= 'universal_health'; 
 
 /* End config */
 

@@ -2,7 +2,7 @@
  $servername='localhost';
  $username='root';
  $password='';
- $db='hopecore';
+ $db='universal_health';
 
 
 

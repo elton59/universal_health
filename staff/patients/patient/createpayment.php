@@ -69,7 +69,7 @@ include("topbar.php");
                                   <p>Dear customer , we currently support mpesa payments only; please follow the following <b>instructions <u>carefully</u></b> to proceed:
                                 <ul><ol><li>Navigate to safaricom SDK/Safaricom App</li>
                                 <li>Select Lipa na MPESA, input Paybill 777123</li>
-                                <li>Enter Account number as Hopecore123 </li>
+                                <li>Enter Account number as universal_health123 </li>
                                 <li>Pay the exact amount requested below or your payment will be rejected (we do not offer refund)</li>
                                 <li>Copy the transaction code below and click submit</li>
                             </ol></ul></p>
@@ -138,7 +138,7 @@ include("topbar.php");
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; John Elton Okoth2020</span>
+                        <span>Copyright &copy;were 2023</span>
                     </div>
                 </div>
             </footer>

@@ -50,90 +50,9 @@ include("../../admin//db.php");
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                My Labtests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
-                                            $query=$mysqli->query("SELECT  COUNT(id )  as total from lab_test where patient_email='$login_session'") or die($mysqli->error);
-                                             while($row=$query->fetch_assoc())
-                                             {
-                                            $id=$row["total"];
-                                           
-                                            echo "$id";
-                                             }
 
-                                            ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                         
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                My Payments</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php 
-                                             $query=$mysqli->query("SELECT count(id) as total from payments where useremail='$login_session'") or die($mysqli->error);
-                                              while($row=$query->fetch_assoc())
-                                              {
-                                                  $staffcount=$row["total"];
-                                                  echo "$staffcount";
-                                              }
-                         
-                                             
-                                              
-                                            ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                         
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                           <!-- Earnings (Monthly) Card Example -->
-                           <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                My treatments</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php 
-                                             $query=$mysqli->query("SELECT count(id) as total from treatment where patientid='$login_session'") or die($mysqli->error);
-                                              while($row=$query->fetch_assoc())
-                                              {
-                                                  $staffcount=$row["total"];
-                                                  echo "$staffcount";
-                                              }
-                         
-                                             
-                                              
-                                            ?>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                         
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
+                        
 
                      
 
@@ -159,7 +78,7 @@ include("../../admin//db.php");
  <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; ken warorwa 2021</span>
+                        <span>Copyright &copy; were 2023</span>
                     </div>
                 </div>
             </footer>

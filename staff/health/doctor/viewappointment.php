@@ -42,7 +42,14 @@ include("topbar.php");
             <!-- Main Content -->
             <div id="content">
 
-                
+                <?php
+                if(isset($_POST['searchpat']))
+                {
+                    $pname=$_POST['spat'];
+                    echo "$pname";
+                    $_SESSION['pfname']=$pname;
+                }
+                ?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -70,6 +77,7 @@ include("topbar.php");
                                   
                                     <th>Patients Firstname</th>
                                     <th>Patients Lastname</th>
+                                    <th>Patients Email</th>
                                     <th>Patient ID</th>
                                     <th>Date Of Appointment</th>
                                     <th>Status</th>
@@ -88,15 +96,16 @@ include("topbar.php");
                                             <td>".$row['appointmenttype']."</td>
                                             <td>".$row['doctors_email']."</td>
                                             <td>".$row['firstname']."</td>
-                                            <td>".$row['Lastname']."</td>  
+                                            <td>".$row['Lastname']."</td>
+                                              
                                             <td>".$row['pfirstname']."</td>  
-                                            <td>".$row['plastname']."</td>   
+                                            <td>".$row['plastname']."</td> 
+                                            <td>".$row['patient_email']."</td>  
                                             <td>".$row['patid']."</td> 
                                             <td>".$row['date_of_appointment']."</td>
                                             <td>".$row['status']."</td>
-                                           <td> <a href='recordtest.php?apapsid=$row[patient_email]' class='btn btn-success'> Lab Diagnosis<a>
-                                           </td>
-                                           <td> <a href='createtreatment.php?apapsid=$row[patient_email]' class='btn btn-info'>Recommendation<a>
+                                           
+                                           <td> <a href='createtreatment.php?apapsid=$row[patient_email]' class='btn btn-info'>Record treatment<a>
                                            </td>
                                             </tbody>
                                             ";
@@ -109,47 +118,54 @@ include("topbar.php");
                         </div>
                     </div>
                      <!-- DataTales Example -->
+                     
+                     <form method="POST" action='viewappointment.php'>
+                     <div class="form-group">
+                        <label>Search Patient</label>
+                                        <input class="form-control" type="text" name="spat" placeholder="search patient" />
+                                    </div>
+                                    <div class="form-group">
+                        
+                                        <input class="btn btn-info" type="submit" name="searchpat" placeholder="search patient" />
+                                    </div>
+                    
+                     </form>
                      <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">sorted appointment</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Patient Treatment History</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                             <table class="table table-bordered" id="appointment">
                                   
-                            <th>Appointmenttype</th>
-                                    <th>Doctors Email</th>
-                                    <th>Doctors Firstname</th>
-                                    <th>Doctors Lastname</th>
+                           
+                                    <th>Id</th>
+                                    <th>Treatment</th>
+                                    <th>Hospptal Name</th>
                                   
-                                    <th>Patients Firstname</th>
-                                    <th>Patients Lastname</th>
-                                    <th>Patient ID</th>
-                                    <th>Date Of Appointment</th>
-                                    <th>Status</th>
+                                    <th>Doctors Email</th>
+                                    <th>Treatment date</th>
+                                    
                                         <?php
-                                        $result=$mysqli->query("SELECT appointments.*,users.firstname as firstname,users.lastname as Lastname,patients.firstname as pfirstname,patients.lastname as plastname,patients.id as patid
-                                        FROM appointments  JOIN users ON doctors_email =users.email JOIN patients ON patient_email =patients.email where appointments.status='closed'and appointments .doctors_email='$login_session' order by id desc") or die($mysqli->error);
+                                        if(isset($pname)){
+                                        $result=$mysqli->query("SELECT * From Lab_test where patient_email='$pname' order by id desc") or die($mysqli->error);
                                         while($row=$result->fetch_assoc())
                                         {
                                             echo
                                             "
                                             <tbody>
-                                            <td>".$row['appointmenttype']."</td>
+                                            <td>".$row['id']."</td>
+                                            <td>".$row['treatment']."</td>
+                                            <td>".$row['hospital_name']."</td>
                                             <td>".$row['doctors_email']."</td>
-                                            <td>".$row['firstname']."</td>
-                                            <td>".$row['Lastname']."</td>  
-                                            <td>".$row['pfirstname']."</td>  
-                                            <td>".$row['plastname']."</td>   
-                                            <td>".$row['patid']."</td> 
-                                            <td>".$row['date_of_appointment']."</td>
-                                            <td>".$row['status']."</td>
+                                            <td>".$row['tod']."</td>  
+                                           
 
 
                                         
                                             </tbody>
                                             ";
-                                        }
+                                        }}
                                         ?>
                                     </tbody>
                                  </table>

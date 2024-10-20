@@ -259,7 +259,7 @@ $r1=mysqli_fetch_assoc($q1);?>
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; John Elton Okoth2020</span>
+                        <span>Copyright &copy;were 2023</span>
                     </div>
                 </div>
             </footer>

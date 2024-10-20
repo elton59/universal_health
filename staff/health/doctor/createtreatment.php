@@ -134,6 +134,19 @@ include("sidebar.php");
                                <div class="form-group">
                                         <textarea class="form-control" name="trtr" placeholder="Record treatment" required></textarea>
                                </div>
+                               <label>Hospital Name</label>
+                               <div class="form-group">
+                                        <select class="form-control" name="hname" readonly required>
+                                            <option value="jaramogi hospital">Jaramogi Oginga Odinga Teaching and referral hospital</option>
+                                            <option value="homabay hospital">Homabay County referral hospital </option>
+                                            <option value="kisii hospital">Homabay County referral hospital </option><br/>
+                                            <br/>
+
+                                            <br/>
+                                        </select>
+
+                               </div>
+                            <div>
                                <div class="form-group">
                                    <input class="from control btn btn-primary" type="submit" value="submit" name="createtreatment"/>
                                    <input class="from control btn btn-danger" type="reset" value="Cancel"/>
@@ -156,7 +169,7 @@ include("sidebar.php");
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; John Elton Okoth2020</span>
+                        <span>Copyright &copy;were 2023</span>
                     </div>
                 </div>
             </footer>

@@ -61,49 +61,37 @@ include("topbar.php");
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="appointment">
-                                    <th>ID</th>
-
-                                    <th>Patient Email</th>
-                                    <th>Patient Firstname</th>
-                                    <th>Patient Lastname</th>
-                                    <th>Doctors Email</th>
-                                    <th>Doctors Firstname</th>
-                                    <th>Doctors Lastname</th>
+                                   
+                                <th>Id</th>
                                     <th>Treatment</th>
-                                    <th>Prescribed Drug</th>
-                                    <th>Quantity</th> 
-                                    <th>NCHV Comment</th>                                   
-                                    <th>Status</th>
-
-
-                                    <?php
-                                    $result = $mysqli->query("select lab_test.*,patients.firstname as pfirstname,patients.lastname as plastname,doctors.firstname as dfirstname,doctors.lastname as dlastname from lab_test join patients on patients.email=lab_test.patient_email join doctors on doctors.email=lab_test.doctors_email where doctors_email='$login_session' and lab_test.status='payment_completed' or lab_test.status='drug_received'  order by id desc") or die($mysqli->error);
-                                    while ($row = $result->fetch_assoc()) {
-                                     
-
-                                        echo
-                                        "
+                                    <th>Hospptal Name</th>
+                                  
+                                    <th>Doctors Email</th>
+                                    <th>Treatment date</th>
+                                    
+                                        <?php
+                                        
+                                        $result=$mysqli->query("SELECT * From Lab_test where doctors_email='$login_session' order by id desc") or die($mysqli->error);
+                                        while($row=$result->fetch_assoc())
+                                        {
+                                            echo
+                                            "
                                             <tbody>
-                                           <td>" . $row['id'] . "</td>
-                                         
-                                           <td>" . $row['patient_email'] . "</td>                                      
-                                           <td>" . $row['pfirstname'] . "</td> 
-                                           <td>" . $row['plastname'] . "</td> 
-                                           <td>" . $row['doctors_email'] . "</td>
-                                           <td>" . $row['dfirstname'] . "</td>
-                                           <td>" . $row['dlastname'] . "</td>
-                                           <td>" . $row['treatment'] . "</td>
-                                           <td>" . $row['drugname'] . "</td>
-                                           <td>" . $row['prescription'] . "</td>
-                                           <td>" . $row['nchv_comment'] . "</td>
-                                           <td>" . $row['status'] . "</td>
-                                          
+                                            <td>".$row['id']."</td>
+                                            <td>".$row['treatment']."</td>
+                                            <td>".$row['hospital_name']."</td>
+                                            <td>".$row['doctors_email']."</td>
+                                            <td>".$row['tod']."</td>  
+                                           
+
+
+                                        
                                             </tbody>
                                             ";
-                                    }
-                                    ?>
+                                        }
+                                        ?>
                                     </tbody>
-                                </table>
+                                    </table>
                                 <button onclick="fnExcelReport()" class="btn btn-success">Export to Excel</a></td>
                             </div>
                             <?php

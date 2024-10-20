@@ -5,7 +5,7 @@
     <div class="footer-legal">
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>kenwarorwa@2022</span></strong>
+          &copy; Copyright <strong><span>were@2023</span></strong>
         </div>
        
       </div>

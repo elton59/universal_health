@@ -72,7 +72,7 @@ session_start();
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#treatment"
         aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder"></i>
-        <span>Treatment</span>
+        <span>My Treatments</span>
     </a>
     <div id="treatment" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
@@ -81,20 +81,7 @@ session_start();
     </div>
 </li>
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#lab_test"
-        aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-folder"></i>
-        <span>Lab Test</span>
-    </a>
-    <div id="lab_test" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-      
-           
-            <a class="collapse-item" href="viewtest.php">View LabTest</a>
 
-    </div>
-</li>
 <!-- Nav Item - Pages Collapse Menu -->
 
 <!-- Divider -->

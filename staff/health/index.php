@@ -47,8 +47,7 @@
                                             <div  class="form-group">
                                            <a href="./doctor"><p>Doctors Portal</option></a>
                                            <hr>
-                                            <a href="./nchv"><p>NCHVs Portal</p></a><hr>
-                                         <hr>
+                                           
                                          
                                            
 </div>

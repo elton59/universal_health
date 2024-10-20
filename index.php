@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Hopecore</title>
+  <title>universal_health</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,12 +50,16 @@
         <div class="col-xl-4">
           <h2 data-aos="fade-up">About US</h2>
           <blockquote data-aos="fade-up" data-aos-delay="100">
-            <p>Hope Core Mobile management system  facilitates managing the company’s public health program with minimal paperwork. This includes patient registration whereby, a record system will store all basic and medical patient information. Full automation of the clinical services from consultation, diagnosis, treatment, lab services and pharmacy</p>
+           
           </blockquote>
          <hr/>
          <blockquote data-aos="fade-up" data-aos-delay="100">
-          <h4 data-aos="fade-up">We Are a Community Development Organization With A Mission To Empower Communities In Kenya And Sub-Saharan Africa To Eradicate Poverty And Improve Family Health.</h4>
-<p>Through our public health, education, income generation, and capacity building programs, today our services have reached over 300,000 villagers on the slopes of Mt. Kenya.</p>
+          <h4 data-aos="fade-up">The system is supposed to be a universal link to all the other databases of the individual 
+hospitals. 
+:</h4>
+<p>A patient visit for example Kenyatta national hospital and again visits Nairobi hospital. 
+The doctors before treatment at Nairobi Hospital should be able to access two main 
+things.</p>
         </blockquote>
        <hr/>
 

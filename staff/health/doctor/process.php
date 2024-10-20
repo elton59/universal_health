@@ -265,6 +265,7 @@ if(isset($_POST['createstaff']))
   
 
     $result=$mysqli->query("INSERT INTO users(specialization,profession,firstname,lastname,gender,adress,serviceid,phonenumber,email,password) values('$staffspec','$staffprof','$stafffname','$stafflname','$staffgen','$staffadr','$staffserid','$staffpno','$staffemail','$staffpass')") or die($mysqli->error);
+    $result2=$mysqli->query("INSERT INTO doctors(specialization,profession,firstname,lastname,gender,adress,serviceid,phonenumber,email,password) values('$staffspec','$staffprof','$stafffname','$stafflname','$staffgen','$staffadr','$staffserid','$staffpno','$staffemail','$staffpass')") or die($mysqli->error);
 
     if($result)
     {
@@ -1066,9 +1067,10 @@ if(isset($_POST['createtreatment']))
     $trpid=$_POST['trpid'];
     $trphid=$_POST['trphid'];
     $trdemail=$_POST['trdemail'];
+    $hname=$_POST['hname'];
  $pres='prescription_pending';
  
-    $result=$mysqli->query("INSERT INTO lab_test (treatment,patient_email,pharmacist_email,doctors_email,status)VALUES('$trtr','$trpid','$trphid','$trdemail','$pres')")or die($mysqli->error);
+    $result=$mysqli->query("INSERT INTO lab_test (treatment,patient_email,pharmacist_email,doctors_email,status,hospital_name)VALUES('$trtr','$trpid','$trphid','$trdemail','$pres','$hname')")or die($mysqli->error);
 
     if($result)
     {

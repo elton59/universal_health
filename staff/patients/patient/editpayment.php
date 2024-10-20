@@ -123,9 +123,9 @@ include("topbar.php");
                                 <div class="form-group">
   
                                         <input class="form-control" name="paymode" value="<?php echo $paymode ?>">
-                                        </div>
+                                     placeholder   </div>
                                <div class="form-group">
-                                        <input class="form-control" name="paytid" placeholder="Transaction ID"  value="<?php echo $paytid?>"required/>
+                                        <input class="form-control" name="paytid" ="Transaction ID"  value="<?php echo $paytid?>"required/>
                                </div>
                                <div class="form-group">
                                         <input class="form-control"  name="paydate" placeholder="Input payment Date" value="<?php echo $paydate?>" required/>
@@ -161,7 +161,7 @@ include("topbar.php");
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; John Elton Okoth2020</span>
+                        <span>Copyright &copy;were 2023</span>
                     </div>
                 </div>
             </footer>

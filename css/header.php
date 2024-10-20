@@ -5,7 +5,7 @@
     <a href="index.html" class="logo d-flex align-items-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="d-flex align-items-center">Hopecore</h1>
+      <h1 class="d-flex align-items-center">universal_health</h1>
     </a>
 
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>

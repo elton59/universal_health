@@ -83,13 +83,14 @@ xmlhttp.send();
       <div class="row" style="margin-top:10px">
 
   		<div class="col-sm-5">
-  		<input type="hidden" name="patient_email"  value="<?php  echo $r1['specialization'];  ?>" class="form-control"  required/>
+  		<input type="hidden" name="patient_email"   value="<?php echo $_SESSION['finance']?>" class="form-control"  required/>
 </div>
 </div>
 <div class="row" style="margin-top:10px">
 
 <div class="col-sm-5">
-<input type="hidden" name="customerid"  value="<?php  echo $r1['id'];  ?>" class="form-control"  required/>
+<input type="hidden" name="customerid"  value="<?php  $q1=mysqli_query($conn,'select * from users where email="'.$_SESSION['finance'].'"');
+$r1=mysqli_fetch_assoc($q1);echo $r1['id'];  ?>" class="form-control"  required/>
 </div>
 </div>
   <div class="row" style="margin-top:10px">

@@ -1,3 +1,3 @@
 <?php
-$conn=mysqli_connect("localhost","root","","hopecore");
+$conn=mysqli_connect("localhost","root","","universal_health");
 ?>
